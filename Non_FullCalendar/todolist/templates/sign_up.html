@@ -1,0 +1,30 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="header-bar">
+    <h1>회원가입</h1>
+</div>
+
+<div class="card-body">
+    <form method="POST">
+
+        <label>성</label>
+        <input type="text" name="firstName">
+
+        <label>이메일 주소</label>
+        <input type="email" name="email">
+
+        <label>패스워드</label>
+        <input type="password" name="password1">
+
+        <label>패스워드 재입력</label>
+        <input type="password" name="password2">
+
+        <input style="margin-top:10px ;" class="button" type="submit" value="Register">
+        <input style="margin-top:10px ;" class="button" type="reset" value="Reset">
+    </form>
+    <p>이미 가입된 계정이 있습니까? → <a href="}">Login</a></p>
+</div>
+
+{% endblock %}{{ url_for('auth.login') }}
